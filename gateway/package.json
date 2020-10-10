@@ -1,0 +1,20 @@
+{
+  "name": "graphql-phonebook-gateway",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon -r dotenv/config -r esm src/index.js"
+  },
+  "author": "William Baker <wbaker@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "@apollo/gateway": "^0.21.0",
+    "apollo-server": "^2.18.2",
+    "dotenv": "^8.2.0",
+    "esm": "^3.2.25"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}

@@ -1,0 +1,31 @@
+version: '3'
+
+services:
+  mongo:
+    restart: always
+    image: mongo
+    restart: always
+    container_name: "mongo"
+    # expose:
+    #   - "27017"
+    ports:
+      - "27017:27017"
+    environment:
+      - MONGO_INITDB_DATABASE=phonebook
+    volumes:
+      - ./dbinit:/docker-entrypoint-initdb.d/:ro
+      # - ./database_files/mongo:./data
+
+  mongoadmin:
+    restart: always
+    depends_on:
+      - mongo
+    image: mongo-express
+    restart: always
+    container_name: "mongoadmin"
+    ports:
+      - "8081:8081"
+    # expose:
+    #   - "8081"
+    # environment:
+    #   ME_CONFIG_SITE_BASEURL: /mongoadmin

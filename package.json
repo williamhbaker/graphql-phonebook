@@ -1,0 +1,17 @@
+{
+  "name": "graphql-phonebook",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "William Baker <wbaker@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "concurrently -k yarn:dev:*",
+    "dev:persons": "yarn --cwd ./services/persons/ dev",
+    "dev:gateway": "wait-on tcp:4001 && yarn --cwd ./gateway/ dev",
+    "dev:client": "yarn --cwd ./client/ start"
+  },
+  "devDependencies": {
+    "concurrently": "^5.3.0",
+    "wait-on": "^5.2.0"
+  }
+}
