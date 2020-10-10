@@ -36,12 +36,14 @@ export const allPeople = async () => {
 
 export const findPersonByName = async (name) => {
   await establishConnection();
-  return await Person.find({ name }.catch((err) => console.log(err.message)));
+  return await Person.findOne(
+    { name }.catch((err) => console.log(err.message))
+  );
 };
 
 export const findPersonById = async (_id) => {
   await establishConnection();
-  return await Person.find({ _id }).catch((err) => console.log(err.message));
+  return await Person.findOne({ _id }).catch((err) => console.log(err.message));
 };
 
 export const createPerson = async (data) => {

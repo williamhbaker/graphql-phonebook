@@ -18,3 +18,14 @@ db.people.insertMany([
     city: 'Helsinki',
   },
 ]);
+
+db.users.insertMany([
+  {
+    username: 'John Smith',
+    friends: [],
+  },
+  {
+    username: 'Jane Doe',
+    friends: [],
+  },
+]);

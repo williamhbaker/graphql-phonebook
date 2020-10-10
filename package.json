@@ -7,7 +7,8 @@
   "scripts": {
     "dev": "concurrently -k yarn:dev:*",
     "dev:persons": "yarn --cwd ./services/persons/ dev",
-    "dev:gateway": "wait-on tcp:4001 && yarn --cwd ./gateway/ dev",
+    "dev:users": "yarn --cwd ./services/users/ dev",
+    "dev:gateway": "wait-on tcp:4001 && wait-on tcp:4002 && yarn --cwd ./gateway/ dev",
     "dev:client": "yarn --cwd ./client/ start"
   },
   "devDependencies": {

@@ -1,0 +1,25 @@
+{
+  "name": "graphql-phonebook-users",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon -r dotenv/config -r esm src/index.js"
+  },
+  "author": "William Baker <wbaker@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "@apollo/federation": "^0.20.4",
+    "apollo-server": "^2.10.1",
+    "dotenv": "^8.2.0",
+    "esm": "^3.2.25",
+    "graphql": "^14.6.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.10.9",
+    "mongoose-unique-validator": "^2.0.3",
+    "uuid": "^8.3.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
