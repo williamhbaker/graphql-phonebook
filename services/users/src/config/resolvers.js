@@ -2,7 +2,10 @@ import * as apiClient from '../api/apiClient';
 
 const resolvers = {
   Query: {
-    me: () => apiClient.getFirstUser(),
+    me: (root, args, context) => {
+      console.log(context.currentUser);
+      return apiClient.getFirstUser();
+    },
   },
   Mutation: {
     createUser: (root, args) => apiClient.createUser(args),
